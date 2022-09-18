@@ -23,7 +23,6 @@ function brightest(colors: string[]) {
 
         const [r, g, b] = getTwoDigitHex(currentValue).map(hexToDec);
         const max = Math.max(r, g, b);
-
         return max > Math.max(...getTwoDigitHex(acc).map(hexToDec)) ? currentValue : acc;
     }, colors[0]);
 }
